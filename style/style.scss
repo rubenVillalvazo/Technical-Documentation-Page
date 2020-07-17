@@ -101,13 +101,13 @@ body {
           }
         }
       }
-      .sidenav-trigger {
-        color: $header-texto !important;
-        float: right;
-      }
       .sidenav-search {
         color: $header-texto !important;
         float: left;
+      }
+      .sidenav-trigger {
+        color: $header-texto !important;
+        float: right;
       }
       .sidenav {
         background-color: $color-primario !important;
@@ -153,6 +153,7 @@ body {
             li {
               text-align: -webkit-match-parent;
               h4 {
+                color: white;
                 font-size: 1.5rem;
                 font-weight: bold;
                 margin: 10px !important;
@@ -202,7 +203,7 @@ body {
 
     main {
       margin: 20px 25px;
-      margin-left: 300px;
+      margin-left: 325px;
       //background-color: white;
       @media screen and (max-width: 992px) {
         margin: auto;
