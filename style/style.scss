@@ -122,81 +122,59 @@ body {
     display: flex;
     width: 100%;
 
-    div.nav-lateral {
-      position: relative;
-      z-index: 998;
-      nav {
-        background-color: transparent;
-        box-shadow: none;
-        min-width: 290px;
-        top: 0px;
-        left: 0px;
-        width: 300px;
-        height: 100%;
-        color: $color-titulos;
-        div.nav-wrapper {
-          header {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin: 10px !important;
-            margin-top: 65px !important;
-            text-align: center !important;
-            color: black;
+    #navbar {
+      background-color: #fff;
+      position: fixed;
+      min-width: 290px;
+      top: 0px;
+      left: 0px;
+      width: 300px;
+      height: 83%;
+      border-right: solid;
+      border-color: rgba(0, 22, 22, 0.4);
+      margin-top: 65px;
+      header {
+        background-color:  rgba(0, 0, 0, 0.75);
+        color: $code-color;
+        margin: 10px;
+        text-align: center;
+        font-size: 1.8em;
+        font-weight: thin;
+      }
+      ul {
+        height: 88%;
+        padding: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+        li {
+          color: #4d4e53;
+          border-top: 1px solid;
+          list-style: none;
+          position: relative;
+          width: 100%;
+          a {
+            display: block;
+            color: #4d4e53;
+            text-decoration: none;
+            cursor: pointer;
           }
-          ul {
-            height: 73%;
-            padding: 0;
-            overflow-y: auto;
-            overflow-x: hidden;
-            display: flex;
-            flex-direction: column;
-            li {
-              text-align: -webkit-match-parent;
-              h4 {
-                color: white;
-                font-size: 1.5rem;
-                font-weight: bold;
-                margin: 10px !important;
-                text-align: center !important;
-              }
-              a {
-                display: block;
-                padding: 5px 15px;
-                text-decoration: none;
-                cursor: pointer;
-                //border-top: 1px solid;
-                list-style: none;
-                position: relative;
-                width: 100%;
-                color: $header-texto !important;
-                &:hover {
-                  color: $header-texto !important;
-                }
-              }
-            }
-          }
-          .sidenav {
-            background-color: $color-primario !important;
-            position: fixed;
-            width: 300px;
-            left: 0;
-            top: 0;
-            margin: 0;
-            -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-            height: 100%;
-            height: calc(100% + 60px);
-            height: -moz-calc(100%);
-            padding-bottom: 60px;
-            //background-color: #fff;
-            z-index: 999;
-            overflow-y: auto;
-            will-change: transform;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-            -webkit-transform: translateX(-105%);
-            transform: translateX(-105%);
-          }
+        }
+      }
+      @media only screen and (max-width: 992px) {
+        background-color: white;
+        position: absolute;
+        top: 0;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-height: 275px;
+        border: none;
+        z-index: 1;
+        border-bottom: 2px solid;
+        margin-top: 65px;
+        ul {
+          border: 1px solid;
+          height: 207px;
         }
       }
     }
@@ -208,6 +186,7 @@ body {
       @media screen and (max-width: 992px) {
         margin: auto;
         width: 90%;
+        margin-top: 300px;
       }
 
       .main-section {
